@@ -1,0 +1,4 @@
+repository "2d-demo@jiafxi@cloud.cn"
+  path "/"
+    br "/main"
+    co "/main"
