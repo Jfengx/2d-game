@@ -134,6 +134,7 @@ MonoBehaviour:
   _isFacingRight: 1
   walkSpeed: 5
   runSpeed: 8
+  airWalkSpeed: 3
   jumpImpulse: 10
 --- !u!114 &2608934251920534913
 MonoBehaviour:
@@ -181,7 +182,19 @@ MonoBehaviour:
     m_ActionId: c0a6cbc6-6fb2-4f1b-8da5-af277a6b0abb
     m_ActionName: Player/Look[/Mouse/delta,/Pen/delta]
   - m_PersistentCalls:
-      m_Calls: []
+      m_Calls:
+      - m_Target: {fileID: 8358709601422960921}
+        m_TargetAssemblyTypeName: PlayerController, Assembly-CSharp
+        m_MethodName: OnAttack
+        m_Mode: 0
+        m_Arguments:
+          m_ObjectArgument: {fileID: 0}
+          m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
+          m_IntArgument: 0
+          m_FloatArgument: 0
+          m_StringArgument: 
+          m_BoolArgument: 0
+        m_CallState: 2
     m_ActionId: 96912797-9a50-452d-bdae-0bb5000b67be
     m_ActionName: Player/Attact[/Mouse/leftButton]
   - m_PersistentCalls:
@@ -242,13 +255,13 @@ MonoBehaviour:
     m_ActionName: Player/Run[/Keyboard/leftShift]
   - m_PersistentCalls:
       m_Calls:
-      - m_Target: {fileID: 0}
-        m_TargetAssemblyTypeName: 
-        m_MethodName: 
-        m_Mode: 1
+      - m_Target: {fileID: 8358709601422960921}
+        m_TargetAssemblyTypeName: PlayerController, Assembly-CSharp
+        m_MethodName: OnJump
+        m_Mode: 0
         m_Arguments:
           m_ObjectArgument: {fileID: 0}
-          m_ObjectArgumentAssemblyTypeName: 
+          m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
           m_IntArgument: 0
           m_FloatArgument: 0
           m_StringArgument: 
@@ -330,6 +343,8 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   groundDistance: 0.05
+  wallCheckDistance: 0.2
+  ceilingDistance: 0.05
   castFilter:
     useTriggers: 0
     useLayerMask: 0
@@ -345,3 +360,5 @@ MonoBehaviour:
     minNormalAngle: 0
     maxNormalAngle: 0
   _isGrounded: 1
+  _isOnWall: 0
+  _isOnCeiling: 0

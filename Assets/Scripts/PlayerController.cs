@@ -64,23 +64,32 @@ public class PlayerController : MonoBehaviour
     {
         get
         {
-            if (IsMoving && !touchDirections.IsOnWall)
+            if (CanMove)
             {
-                if (touchDirections.IsGrounded)
+                if (IsMoving && !touchDirections.IsOnWall)
                 {
-                    if (IsRunning)
+                    if (touchDirections.IsGrounded)
                     {
-                        return runSpeed;
+                        if (IsRunning)
+                        {
+                            return runSpeed;
+                        }
+                        else
+                        {
+                            return walkSpeed;
+                        }
                     }
                     else
                     {
-                        return walkSpeed;
+                        return airWalkSpeed;
                     }
-                } else
-                {
-                    return airWalkSpeed;
                 }
-            } else {
+                else
+                {
+                    return 0;
+                }
+            } else
+            {
                 return 0;
             }
         }
@@ -91,6 +100,14 @@ public class PlayerController : MonoBehaviour
     public float runSpeed = 8f;
     public float airWalkSpeed = 3f;
     public float jumpImpulse = 10f;
+
+    public bool CanMove
+    {
+        get
+        {
+            return animator.GetBool(AnimationStrings.canMove);
+        }
+    }
 
     Vector2 moveInput;
     Rigidbody2D rb;
@@ -142,10 +159,18 @@ public class PlayerController : MonoBehaviour
 
     public void OnJump(InputAction.CallbackContext context)
     {
+        if (context.started && touchDirections.IsGrounded && CanMove)
+        {
+            animator.SetTrigger(AnimationStrings.jumpTrigger);
+            rb.velocity = new Vector2(rb.velocity.x, jumpImpulse);
+        }
+    }
+
+    public void OnAttack(InputAction.CallbackContext context)
+    {
         if (context.started && touchDirections.IsGrounded)
         {
-            animator.SetTrigger(AnimationStrings.jump);
-            rb.velocity = new Vector2(rb.velocity.x, jumpImpulse);
+            animator.SetTrigger(AnimationStrings.attactTrigger);
         }
     }
 
