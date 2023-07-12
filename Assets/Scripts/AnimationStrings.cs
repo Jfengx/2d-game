@@ -9,4 +9,5 @@
     internal static string jumpTrigger = "jump";
     internal static string attactTrigger = "attact";
     internal static string canMove = "canMove";
+    internal static string hasTarget = "hasTarget";
 }
