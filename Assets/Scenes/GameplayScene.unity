@@ -7905,17 +7905,6 @@ Transform:
   m_CorrespondingSourceObject: {fileID: 2208013337260551655, guid: b5e6f5fdf4f2543d49171cac893918d5, type: 3}
   m_PrefabInstance: {fileID: 8914115169330494837}
   m_PrefabAsset: {fileID: 0}
---- !u!114 &1962985249 stripped
-MonoBehaviour:
-  m_CorrespondingSourceObject: {fileID: 8358709601422960921, guid: b5e6f5fdf4f2543d49171cac893918d5, type: 3}
-  m_PrefabInstance: {fileID: 8914115169330494837}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 0}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 1ce010a8f3769485d829c92d91ccedc6, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
 --- !u!1 &1989152083
 GameObject:
   m_ObjectHideFlags: 3
@@ -8059,26 +8048,6 @@ PrefabInstance:
     - target: {fileID: 2208013337260551655, guid: b5e6f5fdf4f2543d49171cac893918d5, type: 3}
       propertyPath: m_LocalEulerAnglesHint.z
       value: 0
-      objectReference: {fileID: 0}
-    - target: {fileID: 2608934251920534913, guid: b5e6f5fdf4f2543d49171cac893918d5, type: 3}
-      propertyPath: m_ActionEvents.Array.data[14].m_PersistentCalls.m_Calls.Array.data[0].m_Mode
-      value: 0
-      objectReference: {fileID: 0}
-    - target: {fileID: 2608934251920534913, guid: b5e6f5fdf4f2543d49171cac893918d5, type: 3}
-      propertyPath: m_ActionEvents.Array.data[14].m_PersistentCalls.m_Calls.Array.data[0].m_Target
-      value: 
-      objectReference: {fileID: 1962985249}
-    - target: {fileID: 2608934251920534913, guid: b5e6f5fdf4f2543d49171cac893918d5, type: 3}
-      propertyPath: m_ActionEvents.Array.data[14].m_PersistentCalls.m_Calls.Array.data[0].m_MethodName
-      value: OnJump
-      objectReference: {fileID: 0}
-    - target: {fileID: 2608934251920534913, guid: b5e6f5fdf4f2543d49171cac893918d5, type: 3}
-      propertyPath: m_ActionEvents.Array.data[14].m_PersistentCalls.m_Calls.Array.data[0].m_TargetAssemblyTypeName
-      value: PlayerController, Assembly-CSharp
-      objectReference: {fileID: 0}
-    - target: {fileID: 2608934251920534913, guid: b5e6f5fdf4f2543d49171cac893918d5, type: 3}
-      propertyPath: m_ActionEvents.Array.data[14].m_PersistentCalls.m_Calls.Array.data[0].m_Arguments.m_ObjectArgumentAssemblyTypeName
-      value: UnityEngine.Object, UnityEngine
       objectReference: {fileID: 0}
     - target: {fileID: 8358709601422960921, guid: b5e6f5fdf4f2543d49171cac893918d5, type: 3}
       propertyPath: walkSpeed
