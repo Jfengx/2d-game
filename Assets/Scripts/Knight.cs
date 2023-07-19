@@ -100,6 +100,7 @@ public class Knight : MonoBehaviour
         {
             FilpDriection();
         }
+
         if (!damageable.LockVelocity) {
             if (CanMove)
             {

@@ -89,6 +89,7 @@ public class Damageable : MonoBehaviour
             if (timeSinceHit > invincibilityTime)
             {
                 isInvincible = false;
+                LockVelocity = false;
                 timeSinceHit = 0;
             }
             timeSinceHit += Time.deltaTime;
