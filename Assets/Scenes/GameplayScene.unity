@@ -227,6 +227,11 @@ Transform:
   m_CorrespondingSourceObject: {fileID: 1525531430409755254, guid: fe3f167deaf724a9888f0336080b2417, type: 3}
   m_PrefabInstance: {fileID: 1734626226}
   m_PrefabAsset: {fileID: 0}
+--- !u!4 &181115042 stripped
+Transform:
+  m_CorrespondingSourceObject: {fileID: 4445670986668080995, guid: b5e6f5fdf4f2543d49171cac893918d5, type: 3}
+  m_PrefabInstance: {fileID: 8914115169330494837}
+  m_PrefabAsset: {fileID: 0}
 --- !u!1 &215638388
 GameObject:
   m_ObjectHideFlags: 0
@@ -8709,7 +8714,12 @@ PrefabInstance:
       propertyPath: m_GravityScale
       value: 1
       objectReference: {fileID: 0}
-    m_RemovedComponents: []
+    - target: {fileID: 8120281162925701198, guid: b5e6f5fdf4f2543d49171cac893918d5, type: 3}
+      propertyPath: launchPoint
+      value: 
+      objectReference: {fileID: 181115042}
+    m_RemovedComponents:
+    - {fileID: 0}
     m_RemovedGameObjects: []
     m_AddedGameObjects: []
     m_AddedComponents: []
